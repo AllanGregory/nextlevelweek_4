@@ -1,13 +1,3 @@
-import 'reflect-metadata';
-import express from 'express';
-import './database';
-import { router } from './routes';
-
-const app = express();
-
-app.use(express.json()); //Habilita o uso do formato json
-app.use(router);
-
 /*
 GET = busca
 POST = salvar
@@ -15,6 +5,8 @@ PUT = alterar
 DELETE = excluir
 PATCH = alteração específica
 */
+
+import { app } from "./app";
 
 /*
 //http://localhost:3333/users
